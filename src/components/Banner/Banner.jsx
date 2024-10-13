@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <div>Banner</div>
+    <div style={{height:'800px',backgroundColor:'black'}}>Banner</div>
   )
 }
 
