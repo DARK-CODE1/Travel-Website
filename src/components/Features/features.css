@@ -1,0 +1,38 @@
+.features-section {
+    padding: 60px 0px;
+    overflow: hidden;
+}
+
+.features-section .slick-active {
+    border: none !important;
+}
+
+.features-section .card {
+    border: none !important;
+    text-align: center;
+    padding: 0 14px;
+    margin-bottom: 14px;
+}
+
+.features-section .card img {
+    width: 75px;
+    margin: 0 auto;
+    margin-bottom: 14px;
+}
+
+.features-section .card .card-title {
+    font-size: var(--subTitle);
+    padding: 12px 0;
+    font-weight: bold;
+}
+
+.features-section .card .card-text {
+    font-size: var(--bodyText);
+    line-height: 22px;
+    color: var(--textclr);
+}
+
+.features-section .card:hover .card-title {
+    color: var(--primaryClr);
+
+}

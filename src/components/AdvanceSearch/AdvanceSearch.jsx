@@ -22,7 +22,7 @@ const AdvanceSearch = () => {
       <Container>
         <Row>
           <Col md={12} xs={12} >
-            <div className="search-box">
+            <div className="search-box shadow">
               <div className="item-search">
                 <CustomDropdown label='location'
                   onSelect={selectedLocation}

@@ -12,7 +12,7 @@ const CustomDropdown = ({ label, options, onSelect }) => {
   }
   return (
     <>
-      <label className="item-search-lable">{label}</label>
+      <label className="item-search-label">{label}</label>
       <Dropdown className='dropdown-custom' onSelect={handleClick}>
         <Dropdown.Toggle id="dropdown-custom-components">
           <span>{selectedValue ? selectedValue : label}</span>
@@ -28,12 +28,14 @@ const CustomDropdown = ({ label, options, onSelect }) => {
           />
           <ul className="list-unstyled">
             {options.filter(
-              (options) =>
-                !value || options.toLowerCase().startsWith(value.toLowerCase()),
+              (option) =>
+                !value || option.toLowerCase().startsWith(value.toLowerCase()),
             ).map((option, index) => (
-              <Dropdown.Item eventKey={option} key={index}>
-                {option}
-              </Dropdown.Item>
+              <li>
+                <Dropdown.Item eventKey={option}>
+                  {option}
+                </Dropdown.Item>
+              </li>
             ))
             }
           </ul>

@@ -63,6 +63,6 @@
     transition: all 0.4s ease-out;
 }
 
-.dropdown-custom .list-unstyled:hover li a {
+.dropdown-custom .list-unstyled li:hover a {
     font-weight: bold;
 }
