@@ -1,4 +1,4 @@
-.dropdown-custom {
+.dropdown-custom #dropdown-custom-components {
     width: 100%;
     background: none;
     font-family: var(--fontFamily);
@@ -9,6 +9,11 @@
     font-size: var(--bodyText);
     position: relative;
     color: var(--textclr);
+}
+
+.dropdown-custom #dropdown-custom-components span {
+    font-family: var(--fontFamily) !important;
+    font-weight: bold;
 }
 
 .dropdown-custom #dropdown-custom-components:focus {
@@ -43,4 +48,21 @@
     content: "\f282";
     font-size: var(--bodyText);
     color: var(--textclr);
+}
+
+.dropdown-custom .dropdown-menu {
+    width: 100%;
+    padding: 12px;
+    min-width: 12rem;
+}
+
+.dropdown-custom .list-unstyled li a {
+    padding: 10px 8px;
+    padding: 10px;
+    font-weight: 500;
+    transition: all 0.4s ease-out;
+}
+
+.dropdown-custom .list-unstyled:hover li a {
+    font-weight: bold;
 }
