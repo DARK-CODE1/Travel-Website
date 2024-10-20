@@ -1,14 +1,100 @@
 import React from 'react'
 import Banner from '../../components/Banner/Banner'
-import AdvanceSearch from '../../components/AdvanceSearch/AdvanceSearch'
-import Features from '../../components/Features/Features'
+import AdvanceSearch from '../../components/AdvanceSearch/AdvanceSearch';
+import Features from '../../components/Features/Features';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+import { destinationsData, popularsData } from "../../utils/data";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './home.css';
+
 
 const Home = () => {
+  var settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true,
+          autoplay: true,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplay: true,
+          prevArrow: false,
+          nextArrow: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: false,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Banner />
-      <AdvanceSearch/>
-      <Features/>
+      <AdvanceSearch />
+      <Features />
+      <section className="tours_section slick-slider">
+        <Container>
+          <Row>
+            <Col md='12'>
+              <div className="main_heading">
+                <h1> Top Destination For Your Next Vacation </h1>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col md='12'>
+              <Slider {...settings}>
+                {destinationsData.map((destination, index) => {
+                  return (
+                    <div className="img-box">
+                      <Card key={index}>
+                        <Card.Img variant="top" src={destination.image} className='img-fluid' alt={destination.name} />
+                        <Card.Title>{destination.name}</Card.Title>
+                        <span className="tours">{destination.tours}</span>
+                      </Card>
+                    </div>
+                  )
+                })}
+              </Slider>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </>
   )
 }

@@ -11,13 +11,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Features = () => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: false,
     autoplaySpeed: 1500,
     slidesToShow: 4,
     slidesToScroll: 1,
-
     responsive: [
       {
         breakpoint: 1024,

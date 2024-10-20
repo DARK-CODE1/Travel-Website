@@ -6,7 +6,7 @@
     position: relative;
     top: -70px;
     margin-bottom: -50px;
-    z-index: 999 !important;
+    z-index: 888 !important;
     display: flex;
     align-items: flex-end;
 }
