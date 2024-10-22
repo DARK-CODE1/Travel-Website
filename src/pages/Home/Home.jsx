@@ -119,12 +119,11 @@ const Home = () => {
         </Container>
         <div className="overlay"></div>
       </section>
-
-      <section className="tours_section slick-slider">
+      <section className="gallery">
         <Container>
           <Row>
             <Col md='12'>
-              <div className="main_heading">
+              <div className="main_heading mt-4">
                 <h1> Photo Gallery </h1>
               </div>
             </Col>

@@ -105,7 +105,7 @@
     font-weight: bold;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     left: 0;
     top: 0;
@@ -117,6 +117,31 @@
 
 .bounce {
     animation: bounce 3s infinite;
+}
+
+.gallery {
+    background-color: var(--secondaryClr);
+    overflow: hidden;
+    padding: 50 0;
+}
+
+.gallery .styles_thumbpanel__1sa4E {
+    z-index: 9999;
+}
+
+.gallery .styles_lightroom__1X2qE {
+    position: fixed;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.gallery .styles_sub__363ZQ {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.gallery .styles_column__2r45X {
+    height: 280px;
 }
 
 @keyframes bounce {
@@ -141,7 +166,7 @@
 }
 
 @media only screen and (max-width: 1199px) {
-    .call_us{
+    .call_us {
         overflow: hidden;
     }
 
@@ -153,7 +178,7 @@
 }
 
 @media only screen and (max-width: 420px) {
-    .call_us{
+    .call_us {
         overflow: hidden;
     }
 

@@ -1,11 +1,11 @@
-import React from 'react';
-import GalleryImg1 from "../../assets/images/gallery/g1.jpg";
-import GalleryImg2 from "../../assets/images/gallery/g2.jpg";
-import GalleryImg3 from "../../assets/images/gallery/g3.jpg";
-import GalleryImg4 from "../../assets/images/gallery/g4.jpg";
-import GalleryImg5 from "../../assets/images/gallery/g5.jpg";
-import GalleryImg6 from "../../assets/images/gallery/g6.jpg";
-import GalleryImg7 from "../../assets/images/gallery/g7.jpg";
+import React from 'react'
+import Lightroom from 'react-lightbox-gallery'
+import GalleryImg1 from "../../assets/images/gallery/g1.jpg"
+import GalleryImg3 from "../../assets/images/gallery/g3.jpg"
+import GalleryImg4 from "../../assets/images/gallery/g4.jpg"
+import GalleryImg6 from "../../assets/images/gallery/g6.jpg"
+import GalleryImg7 from "../../assets/images/gallery/g7.jpg"
+
 
 const Gallery = () => {
 
@@ -39,9 +39,19 @@ const Gallery = () => {
       sub: "Hari Nandakumar"
     },
   ];
+
+  var settings = {
+    columnCount: {
+      default: 3,
+      mobile: 2,
+      tab: 3
+    },
+    mode: "dark",
+    enableZoom: true,
+  };
   return (
-    <div>Gallery</div>
-  )
+    <Lightroom images={images} settings={settings} />
+  );
 }
 
 export default Gallery
