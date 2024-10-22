@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 const Features = () => {
   var settings = {
     dots: true,
+    arrows:false,
     infinite: true,
     autoplay: false,
     autoplaySpeed: 1500,

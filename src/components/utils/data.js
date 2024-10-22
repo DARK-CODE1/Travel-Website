@@ -1,12 +1,12 @@
 // populars
-import Anchorage from "../../assets/images/popular/Anchorage To La Paz.jpg";
-import Singapore from "../../assets/images/popular/Discover Singapore.png";
-import Kiwiana from "../../assets/images/popular/Kiwiana Panorama.jpg";
-import Quito from "../../assets/images/popular/Anchorage To Quito.jpg";
-import Cuzco from "../../assets/images/popular/Cuzco To Anchorage.jpg";
-import Ushuaia from "../../assets/images/popular/Anchorage To Ushuaia.jpg";
-import Santiago from "../../assets/images/popular/Anchorage To Santiago.jpg";
-import Explorer from "../../assets/images/popular/LA Explorer.jpg";
+import Anchorage from "../../assets/images/popular/Anchorage-To-La-Paz.jpg";
+import Singapore from "../../assets/images/popular/Discover-Singapore.png";
+import Kiwiana from "../../assets/images/popular/Kiwiana-Panorama.jpg";
+import Quito from "../../assets/images/popular/Anchorage-To-Quito.jpg";
+import Cuzco from "../../assets/images/popular/Cuzco-To-Anchorage.jpg";
+import Ushuaia from "../../assets/images/popular/Anchorage-To-Ushuaia.jpg";
+import Santiago from "../../assets/images/popular/Anchorage-To-Santiago.jpg";
+import Explorer from "../../assets/images/popular/LA-Explorer.jpg";
 
 // tour detail
 import image1 from "../../assets/images/new/1.jpg";

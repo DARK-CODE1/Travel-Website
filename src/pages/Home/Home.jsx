@@ -3,12 +3,12 @@ import Banner from '../../components/Banner/Banner'
 import AdvanceSearch from '../../components/AdvanceSearch/AdvanceSearch';
 import Features from '../../components/Features/Features';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { destinationsData, popularsData } from "../../utils/data";
+import { destinationsData } from "../../utils/data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './home.css';
-
+import Populars from '../../components/Populars/Populars';
 
 const Home = () => {
   var settings = {
@@ -81,8 +81,8 @@ const Home = () => {
               <Slider {...settings}>
                 {destinationsData.map((destination, index) => {
                   return (
-                    <div className="img-box">
-                      <Card key={index}>
+                    <div className="img-box" key={index}>
+                      <Card>
                         <Card.Img variant="top" src={destination.image} className='img-fluid' alt={destination.name} />
                         <Card.Title>{destination.name}</Card.Title>
                         <span className="tours">{destination.tours}</span>
@@ -95,6 +95,8 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      <Populars />
+      
     </>
   )
 }
