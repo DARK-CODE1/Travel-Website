@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './home.css';
 import Populars from '../../components/Populars/Populars';
 import Gallery from '../../components/Gallery/Gallery';
+import Cards from '../../components/Cards/Cards';
 
 const Home = () => {
   var settings = {
@@ -82,13 +83,7 @@ const Home = () => {
               <Slider {...settings}>
                 {destinationsData.map((destination, index) => {
                   return (
-                    <div className="img-box" key={index}>
-                      <Card>
-                        <Card.Img variant="top" src={destination.image} className='img-fluid' alt={destination.name} />
-                        <Card.Title>{destination.name}</Card.Title>
-                        <span className="tours">{destination.tours}</span>
-                      </Card>
-                    </div>
+                    <Cards destination={destination} key={index}/>
                   )
                 })}
               </Slider>

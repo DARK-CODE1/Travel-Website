@@ -1,10 +1,11 @@
-import React from 'react'
-import Lightroom from 'react-lightbox-gallery'
-import GalleryImg1 from "../../assets/images/gallery/g1.jpg"
-import GalleryImg3 from "../../assets/images/gallery/g3.jpg"
-import GalleryImg4 from "../../assets/images/gallery/g4.jpg"
-import GalleryImg6 from "../../assets/images/gallery/g6.jpg"
-import GalleryImg7 from "../../assets/images/gallery/g7.jpg"
+import React from 'react';
+import Lightroom from 'react-lightbox-gallery';
+import GalleryImg1 from "../../assets/images/gallery/g1.jpg";
+import GalleryImg2 from "../../assets/images/gallery/g5.jpg";
+import GalleryImg3 from "../../assets/images/gallery/g3.jpg";
+import GalleryImg4 from "../../assets/images/gallery/g4.jpg";
+import GalleryImg6 from "../../assets/images/gallery/g6.jpg";
+import GalleryImg7 from "../../assets/images/gallery/g7.jpg";
 
 
 const Gallery = () => {
@@ -34,7 +35,7 @@ const Gallery = () => {
       sub: "Verne Ho"
     },
     {
-      src: GalleryImg6,
+      src: GalleryImg2,
       desc: "Rann of kutch , India",
       sub: "Hari Nandakumar"
     },
