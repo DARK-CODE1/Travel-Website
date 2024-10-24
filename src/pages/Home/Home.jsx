@@ -2,7 +2,7 @@ import React from 'react'
 import Banner from '../../components/Banner/Banner'
 import AdvanceSearch from '../../components/AdvanceSearch/AdvanceSearch';
 import Features from '../../components/Features/Features';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { destinationsData } from "../../utils/data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
