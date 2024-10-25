@@ -64,11 +64,11 @@ header .navbar .offcanvas-body .dropdown-menu {
     min-width: 12rem;
 }
 
-header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
+header .navbar .offcanvas-body .dropdown-menu .nav-link {
     color: var(--black) !important;
 }
 
-header .navbar .offcanvas-body .dropdown-menu .dropdown-item:hover {
+header .navbar .offcanvas-body .dropdown-menu .nav-link:hover {
     color: var(--primaryClr) !important;
     max-width: 991px;
 }

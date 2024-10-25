@@ -24,6 +24,12 @@ const Header = () => {
     const scrollTop = window.scrollY;
     scrollTop >= 120 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky')
   };
+
+  const closeMenu = () => {
+    if (window.innerWidth <= 991) {
+      setOpen(false)
+    }
+  }
   return (
     <header className='header-section'>
       <Container>
@@ -45,12 +51,21 @@ const Header = () => {
                 <NavLink className='nav-link' to='/'>Home</NavLink>
                 <NavLink className='nav-link' to='about'>ABOUT US</NavLink>
                 <NavLink className='nav-link' to='tours'>TOURS</NavLink>
-                <NavDropdown title="DESTINATION" id='offcanvasNavbarDropdown-expand-lg'>
-                  <NavDropdown.Item href="#action3">
-                    <NavLink to='destinations'>SPAIN TOURS</NavLink>
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">ITALY TOURS</NavDropdown.Item>
-                  <NavDropdown.Item href="#action5">FRANCE TOURS</NavDropdown.Item>
+
+                <NavDropdown
+                  title="DESTINATION"
+                  id={`offcanvasNavbarDropdown-expand-lg`}
+                >
+                  <NavLink className="nav-link text-dark" to="/destinations" onClick={closeMenu}>
+                    SPAIN TOURS
+                  </NavLink>
+                  <NavLink className="nav-link text-dark" to="/destinations" onClick={closeMenu}>
+                    ITALY TOURS
+                  </NavLink>
+                  <NavLink className="nav-link text-dark" to="/destinations" onClick={closeMenu}>
+                    FRANCE TOURS
+                  </NavLink>
+
                 </NavDropdown>
                 <NavLink className='nav-link' to='photo-gallery'>GALLERY</NavLink>
                 <NavLink className='nav-link' to='contact-us'>CONTACT</NavLink>

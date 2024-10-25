@@ -19,8 +19,16 @@ const Breadcrumbs = (props) => {
                     <Row>
                         <Breadcrumb>
                             <Breadcrumb.Item active>
-                                <NavLink className='nav-link' to='/'><i className="bi bi-house-door-fill me-1"></i> Home</NavLink>
+                                <NavLink to="/">
+                                    <i className="bi bi-house-door-fill me-1"></i> Home
+                                </NavLink>
                             </Breadcrumb.Item>
+                            <Breadcrumb.Item active>{props.pageName}</Breadcrumb.Item>
+                            {props.childpageName ? (
+                                <Breadcrumb.Item active>{props.childpageName}</Breadcrumb.Item>
+                            ) : (
+                                ""
+                            )}
                         </Breadcrumb>
                     </Row>
                 </Container>
