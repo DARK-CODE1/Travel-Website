@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './tours.css';
 
 const TourDetails = () => {
   return (
-    <div>TourDetails</div>
+    <>
+    
+    </>
   )
 }
 

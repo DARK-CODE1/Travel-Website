@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Offcanvas, Row } from 'react-bootstrap';
 import { popularsData } from "../../utils/data";
 import PopularCard from '../../components/Cards/PopularCard';
 import Filters from './Filters';
 import './tours.css';
 
 const Tours = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <Breadcrumbs title='Tours' pageName='Tours' />
-      <div className="py-5 tour-list">
+      <section className="py-4 tour-list">
         <Container>
           <Row>
             <Col xl='3' lg='4' md='12' sm='12'>
-            <Filters/>
+              <div className="d-lg-none d-block mb-3">
+                <button className='primaryBtn' onClick={handleShow}>
+                  <i className="bi bi-funnel"></i>Filters
+                </button>
+              </div>
+
+              <div className="filters d-lg-block d-none"><Filters /></div>
             </Col>
             <Col xl='9' lg='8' md='12' sm='12'>
               <Row>
                 {popularsData.map((val, index) => {
                   return (
-                    <Col xs={12} sm={6} md={6} lg={6} xl={4}className='mb-3' key={index}>
+                    <Col xs={12} sm={6} md={6} lg={6} xl={4} className='mb-3' key={index}>
                       <PopularCard val={val} />
                     </Col>
                   )
@@ -29,7 +40,16 @@ const Tours = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </section>
+
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Filters</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Filters />
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   )
 }

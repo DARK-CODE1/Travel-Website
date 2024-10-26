@@ -5,7 +5,7 @@ import './tours.css';
 const Filters = () => {
     return (
         <div className="side_bar">
-            <div className="filter_box">
+            <div className="filter_box shadow rounded-2">
 
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
@@ -18,7 +18,7 @@ const Filters = () => {
                     </Accordion.Item>
                 </Accordion>
 
-                <Accordion defaultActiveKey="0">
+                <Accordion>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Categories </Accordion.Header>
                         <Accordion.Body>
@@ -29,7 +29,7 @@ const Filters = () => {
                     </Accordion.Item>
                 </Accordion>
 
-                <Accordion defaultActiveKey="0">
+                <Accordion>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Duration </Accordion.Header>
                         <Accordion.Body>
@@ -40,7 +40,7 @@ const Filters = () => {
                     </Accordion.Item>
                 </Accordion>
 
-                <Accordion defaultActiveKey="0">
+                <Accordion>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Prices </Accordion.Header>
                         <Accordion.Body>
@@ -51,7 +51,7 @@ const Filters = () => {
                     </Accordion.Item>
                 </Accordion>
 
-                <Accordion defaultActiveKey="0">
+                <Accordion>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Ratings </Accordion.Header>
                         <Accordion.Body>
