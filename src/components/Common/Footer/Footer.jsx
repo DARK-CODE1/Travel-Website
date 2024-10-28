@@ -78,7 +78,7 @@ const Footer = () => {
               </div>
               <div className="d-flex align-items-top my-2">
                 <i className="bi bi-envelope me-3"></i>
-                <a target="_blank" rel="no noreferrer" href="mailto:default@gmail.com" className="d-block" > rawatcoder@gmail.com</a>
+                <a target="_blank" rel="no noreferrer" href="mailto:default@gmail.com" className="d-block" > default@gmail.com</a>
               </div>
               <div className="d-flex align-items-top my-2">
                 <i className="bi bi-telephone me-3"></i>
