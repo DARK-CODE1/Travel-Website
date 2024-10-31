@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import { Card, Col, Container, Form, ListGroup, Row } from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
@@ -7,6 +7,11 @@ import "./Booking.css";
 const Booking = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+
+  useEffect(() => {
+    document.title = 'Booking'
+    window.scroll(0, 0)
+  }, [])
 
   return (
     <>
@@ -95,8 +100,8 @@ const Booking = () => {
                   </ListGroup>
                 </Card.Body>
                 <Card.Footer className='d-flex justify-content-between py-4'>
-                <span className='font-bold h5'>Payable Now</span>
-                <strong className='font-bold h5'>$28,660</strong>
+                  <span className='font-bold h5'>Payable Now</span>
+                  <strong className='font-bold h5'>$28,660</strong>
                 </Card.Footer>
               </Card>
             </Col>

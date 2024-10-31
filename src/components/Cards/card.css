@@ -1,5 +1,6 @@
 .img-box {
     padding: 0px 12px;
+    cursor: pointer;
 }
 
 .img-box .card {

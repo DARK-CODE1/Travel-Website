@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import { Card, Col, Container, FloatingLabel, Form, ListGroup, Row } from 'react-bootstrap';
 import image from "../../assets/images/about/contact-us.png";
 
 const Contact = () => {
+
+  useEffect(() => {
+    document.title = 'Contact'
+    window.scroll(0, 0)
+  }, [])
+  
   return (
     <>
       <Breadcrumbs title='Contact Us' pageName='Contact' />

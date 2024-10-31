@@ -10,11 +10,11 @@
     box-shadow: unset;
 }
 
-.booking-section label{
+.booking-section label {
     color: var(--textclr);
     font-weight: 600;
 }
 
-.react-datepicker-wrapper{
+.react-datepicker-wrapper {
     width: 100%;
 }

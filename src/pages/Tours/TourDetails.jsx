@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './tours.css';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import { NavLink } from 'react-router-dom';
@@ -6,6 +6,12 @@ import { tourDetails } from '../../utils/data';
 import ImageGallery from "react-image-gallery";
 import { Accordion, Card, Col, Container, ListGroup, Nav, Row, Stack, Tab } from 'react-bootstrap';
 const TourDetails = () => {
+
+  useEffect(() => {
+    document.title = 'Tour Details'
+    window.scroll(0, 0)
+  }, [])
+
   return (
     <>
       <Breadcrumbs title={tourDetails.title} childpageName={tourDetails.title} pageName=<NavLink to='/tours'>Tours</NavLink> />

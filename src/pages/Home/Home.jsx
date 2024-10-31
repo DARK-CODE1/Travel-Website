@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Banner from '../../components/Banner/Banner'
 import AdvanceSearch from '../../components/AdvanceSearch/AdvanceSearch';
 import Features from '../../components/Features/Features';
@@ -62,7 +62,10 @@ const Home = () => {
       },
     ],
   };
-
+  useEffect(() => {
+    document.title = 'Home'
+    window.scroll(0, 0)
+  }, [])
   return (
     <>
       <Banner />

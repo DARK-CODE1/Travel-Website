@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import { Col, Container, Row } from 'react-bootstrap';
 import { destinationsData } from "../../utils/data";
 import Cards from '../../components/Cards/Cards';
 
 const Destinations = () => {
+  useEffect(() => {
+    document.title = 'Destinations'
+    window.scroll(0, 0)
+  }, [])
   return (
     <>
       <Breadcrumbs title='Destinations' pageName='Destinations' />

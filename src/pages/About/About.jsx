@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import aboutImg from "../../assets/images/about/aboutimg.png";
 import { Card, Col, Container, Row } from 'react-bootstrap';
@@ -8,6 +8,12 @@ import icon2 from "../../assets/images/icons/best-price.png";
 import icon3 from "../../assets/images/icons/quick.png";
 
 const About = () => {
+
+  useEffect(() => {
+    document.title = 'About Us'
+    window.scroll(0, 0)
+  }, [])
+  
   return (
     <>
       <Breadcrumbs title='About Us' pageName='About Us' />

@@ -48,9 +48,9 @@ const Header = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink className='nav-link' to='/'>HOME</NavLink>
-                <NavLink className='nav-link' to='about'>ABOUT US</NavLink>
-                <NavLink className='nav-link' to='tours'>TOURS</NavLink>
+                <NavLink className='nav-link' to='/' onClick={closeMenu}>HOME</NavLink>
+                <NavLink className='nav-link' to='about' onClick={closeMenu}>ABOUT US</NavLink>
+                <NavLink className='nav-link' to='tours' onClick={closeMenu}>TOURS</NavLink>
 
                 <NavDropdown
                   title="DESTINATION"
@@ -67,13 +67,13 @@ const Header = () => {
                   </NavLink>
 
                 </NavDropdown>
-                <NavLink className='nav-link' to='photo-gallery'>GALLERY</NavLink>
-                <NavLink className='nav-link' to='contact-us'>CONTACT</NavLink>
+                <NavLink className='nav-link' to='photo-gallery' onClick={closeMenu}>GALLERY</NavLink>
+                <NavLink className='nav-link' to='contact-us' onClick={closeMenu}>CONTACT</NavLink>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
           <div className="ms-md-4 ms-2">
-            <NavLink className='primaryBtn d-none d-sm-inline-block' to='booking'>Book Now</NavLink>
+            <NavLink className='primaryBtn d-none d-sm-inline-block' to='booking' onClick={closeMenu}>Book Now</NavLink>
             <div className="d-inline-block d-lg-none ms-3 toggle_btn">
               <i className={open ? 'bi bi-x-lg' : 'bi bi-list'} onClick={ToggleMenu}></i>
             </div>
